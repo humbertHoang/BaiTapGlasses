@@ -1,0 +1,35 @@
+.my-app{
+  background-image: url("/src/assets/img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-block-size: 100vh;
+  isolation: isolate;
+}
+.my-app::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.glasses-overlay{
+  position: absolute;
+  width: 50%;
+  height: auto;
+  top: 25%;
+  left: 25%;
+  mix-blend-mode: multiply;
+}
+.content-overlay{
+  border-image: fill 1 linear-gradient(hsl(36 100% 75% / .3), hsl(36 100% 50% / .5));
+}
+
+.my-card-img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3px 15px;
+}
